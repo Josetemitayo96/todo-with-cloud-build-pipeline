@@ -9,6 +9,6 @@ steps:
   waitFor: ['build-image']
 - name: 'gcr.io/cloud-builders/gcloud'
   #args: ['gcloud compute ssh rohandash1998@virtual-instance --zone=us-central1-a --command=\"touch /home/rohandash1998/test\"\n']
-  args: ["gcloud", "compute", "ssh", "josetemitayo@instance-1", "--zone=us-central1-a", "--command=mkdir tayo"]
+  args: ["gcloud compute ssh", "josetemitayo@instance-1", "--zone=us-central1-a", "--command=mkdir tayo"]
   id: 'mkdir'
   waitFor: ['push-image-to-container-registry']
