@@ -20,4 +20,4 @@ steps:
   waitFor: ['push-image-to-container-registry']
 #logsBucket: 'gs://logs-codebuild-$PROJECT_ID/$BUILD_ID'
 options:
-  logging: GCS_ONLY
+  logging: CLOUD_LOGGING_ONLY
