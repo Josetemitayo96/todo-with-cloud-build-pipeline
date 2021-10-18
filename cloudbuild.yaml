@@ -18,6 +18,6 @@ steps:
 
   id: 'mkdir'
   waitFor: ['push-image-to-container-registry']
-#logsBucket: 'gs://logs-codebuild-$PROJECT_ID/$BUILD_ID'
+logsBucket: 'gs://logs-codebuild-$PROJECT_ID/$BUILD_ID'
 options:
   logging: CLOUD_LOGGING_ONLY
