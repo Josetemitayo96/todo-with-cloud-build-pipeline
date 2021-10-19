@@ -37,7 +37,7 @@ steps:
   entrypoint: "bash"
   args: [
           "-c",
-          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"chmod +x /home/josetemitayo/deploy.sh\"\n"
+          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"chmod +x /home/josetemitayo/workspace/deploy.sh\"\n"
   ]
 
   id: 'script-permission'
@@ -48,7 +48,7 @@ steps:
   entrypoint: "bash"
   args: [
           "-c",
-          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"./home/josetemitayo/deploy.sh\"\n"
+          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"./home/josetemitayo/workspace/deploy.sh\"\n"
   ]
 
   id: 'execute-script'
