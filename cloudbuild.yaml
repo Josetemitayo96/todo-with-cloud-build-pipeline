@@ -28,7 +28,7 @@ steps:
           "gcloud compute scp josetemitayo@instance-1 --zone=us-central1-a /workspace/. /home/josetemitayo/"
   ]
 
-  id: 'mkdir'
-  waitFor: ['copy-files']
+  id: 'cpy-files'
+  waitFor: ['mkdir']
 options:
   logging: CLOUD_LOGGING_ONLY
