@@ -13,7 +13,7 @@ steps:
   entrypoint: "bash"
   args: [
           "-c",
-          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"mkdir josetayo\"\n"
+          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"mkdir ijosetayo\"\n"
   ]
 
   id: 'mkdir'
