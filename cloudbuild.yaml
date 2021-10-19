@@ -48,7 +48,7 @@ steps:
   entrypoint: "bash"
   args: [
           "-c",
-          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"./home/josetemitayo/workspace/deploy.sh\"\n"
+          "gcloud compute ssh josetemitayo@instance-1 --zone=us-central1-a --command=\"cd /home/josetemitayo/workspace/ && ./deploy.sh\"\n"
   ]
 
   id: 'execute-script'
