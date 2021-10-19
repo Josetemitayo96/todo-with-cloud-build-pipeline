@@ -31,7 +31,7 @@ steps:
   id: 'cpy-files'
   waitFor: ['mkdir']
 
-  - name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud'
   #args: ['gcloud compute ssh rohandash1998@virtual-instance --zone=us-central1-a --command=\"touch /home/rohandash1998/test\"\n']
   #args: ["compute ssh", "josetemitayo@instance-1", "--zone=us-central1-a", "--command=mkdir tayo"]
   entrypoint: "bash"
