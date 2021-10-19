@@ -25,7 +25,7 @@ steps:
   entrypoint: "bash"
   args: [
           "-c",
-          "gcloud compute scp josetemitayo@instance-1 --zone=us-central1-a /workspace/. /home/josetemitayo/"
+          "gcloud compute scp --recursive --zone=us-central1-a /workspace/. josetemitayo@instance-1:/home/josetemitayo/"
   ]
 
   id: 'cpy-files'
