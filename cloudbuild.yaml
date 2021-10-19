@@ -19,5 +19,16 @@ steps:
   id: 'mkdir'
   waitFor: ['push-image-to-container-registry']
 #logsBucket: 'gs://logs-codebuild-$PROJECT_ID/$BUILD_ID'
+- name: 'gcr.io/cloud-builders/gcloud'
+  #args: ['gcloud compute ssh rohandash1998@virtual-instance --zone=us-central1-a --command=\"touch /home/rohandash1998/test\"\n']
+  #args: ["compute ssh", "josetemitayo@instance-1", "--zone=us-central1-a", "--command=mkdir tayo"]
+  entrypoint: "bash"
+  args: [
+          "-c",
+          "gcloud compute scp josetemitayo@instance-1 --zone=us-central1-a /workspace/. /home/josetemitayo/"
+  ]
+
+  id: 'mkdir'
+  waitFor: ['copy-files']
 options:
   logging: CLOUD_LOGGING_ONLY
